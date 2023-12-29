@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+--colorSecundario: #20e3b2;
+--colorPrincipal:rgb(10,25,47);
+--colorRojo:rgb(102, 16, 32);
+}
+body{
+    background-color: var(--colorPrincipal);
+    color: white;
+}
+
+h1,h2,h3,figcaption{
+    font-family: Fira Code;
+}
+p{
+    font-family: Kanit;
+}
+span{
+    font-family: Fira Code;
+    color: var(--colorSecundario);
+}
+figcaption{
+    color: white;
+}
+/*HEADER*/
+header figure img{
+    width: 60px;
+    height: 60px;
+}
+
+header nav ul li span{
+font-weight: 900;
+}
+header nav:nth-of-type(1) ul li{
+    width: 55px;
+    height: 55px;
+    background-image: url(/img/sprites/sprites.png);
+    background-repeat: no-repeat;
+    transition: all .09s;
+}
+header nav:nth-of-type(1) ul li a{
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+header nav:nth-of-type(1) ul li:nth-of-type(1){
+    background-position: 0 -1px;
+}
+header nav:nth-of-type(1) ul li:nth-of-type(2){
+background-position: -65px 0;
+}
+header nav:nth-of-type(1) ul li:nth-of-type(1):hover{
+    background-position: 0 -65px;
+}
+header nav:nth-of-type(1) ul li:nth-of-type(2):hover{
+    background-position: -65px -65px;
+}
+header nav ul li a{
+    color: white;
+    transition: all .5s;
+}
+header nav ul li a span{
+    transition: all .5s;
+}
+header nav ul li a:hover{
+    color: var(--colorSecundario);
+}
+header nav ul li a:hover span{
+    color: white;
+}
+.curriculumButton{
+    color: var(--colorSecundario);
+    font-weight: 500;
+    border: 2px solid var(--colorSecundario);
+    transition: all .2s;
+}
+.curriculumButton:hover{
+    color: var(--colorRojo);
+    border:2px solid var(--colorRojo);
+}
+
+/*SECCION 1: PRESENTACION*/
+section:nth-of-type(1) h3{
+color: var(--colorSecundario);
+}
+
+section:nth-of-type(1) h1{
+font-size: 50px;
+}
+section:nth-of-type(1) h3{
+    font-size: 18px;
+}
+section:nth-of-type(1) p{
+    color: gray;
+}
+section:nth-of-type(1) p:nth-of-type(1) span:nth-of-type(2){
+    color: var(--colorRojo);
+}
+
+/*SECCION 2: PROYECTOS*/
+.accordion-button, .accordion-item{
+    background-color: var(--colorPrincipal);
+    color: white;
+}
+.accordion-button{
+    position: relative;
+}
+section:nth-of-type(2) .accordion-item button figure{
+    position: absolute;
+    right: 7%;
+    top: 20%;
+    height: 30px;
+    width: 30px;
+    background-image: url(/img/sprites/spritesProyectos.png);
+    background-repeat: no-repeat;
+}
+
+
+section:nth-of-type(2) .accordion-item:nth-of-type(1) button figure{
+background-position: 0 0;
+}
+
+section:nth-of-type(2) .accordion-item:nth-of-type(2) button figure{
+    background-position: -40px -1px;
+}
+
+section:nth-of-type(2) .accordion-item:nth-of-type(3) button figure{
+    background-position: -80px 0;
+}
+
+section:nth-of-type(2) .accordion-body figure{
+    position: relative;
+}
+
+section:nth-of-type(2) .accordion-body figcaption{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    font-weight: 900;
+    width: 100%;
+    background-color: rgb(0, 0, 0,0.6);
+    display: block;
+}
+
+section:nth-of-type(2) #accordion-caption{
+    color: var(--colorSecundario);
+}
+
+section:nth-of-type(2) .accordion-body p{
+    color: white;
+    font-size: 14px;
+}
+
+.accordion-item{
+    border: 2px solid var(--colorSecundario);
+}
