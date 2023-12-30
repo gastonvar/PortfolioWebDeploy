@@ -114,6 +114,7 @@ section:nth-of-type(1) p:nth-of-type(1) span:nth-of-type(2){
 }
 .accordion-button{
     position: relative;
+    transition: all .3s;
 }
 section:nth-of-type(2) .accordion-item button figure{
     position: absolute;
@@ -164,3 +165,4 @@ section:nth-of-type(2) .accordion-body p{
 .accordion-item{
     border: 2px solid var(--colorSecundario);
 }
+
