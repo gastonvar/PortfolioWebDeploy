@@ -93,7 +93,6 @@ header nav ul li a:hover span{
 section:nth-of-type(1) h3{
 color: var(--colorSecundario);
 }
-
 section:nth-of-type(1) h1{
 font-size: 50px;
 }
