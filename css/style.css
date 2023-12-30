@@ -13,6 +13,7 @@ html{
 --colorSecundario: #20e3b2;
 --colorPrincipal:rgb(10,25,47);
 --colorRojo:rgb(102, 16, 32);
+--colorFondoArticulos:rgb(0, 0, 0,0.2);
 }
 body{
     background-color: var(--colorPrincipal);
@@ -21,6 +22,9 @@ body{
 
 h1,h2,h3,figcaption{
     font-family: Fira Code;
+}
+h4{
+    color: rgb(117, 117, 158);
 }
 p{
     font-family: Kanit;
@@ -102,10 +106,15 @@ section:nth-of-type(1) h3{
 section:nth-of-type(1) p{
     color: gray;
 }
-section:nth-of-type(1) p:nth-of-type(1) span:nth-of-type(2){
+
+.ORT{
     color: var(--colorRojo);
 }
-
+section:nth-of-type(1) div:nth-of-type(1){
+background-color: var(--colorFondoArticulos);
+border-radius: 18px;
+padding: 18px;
+}
 /*SECCION 2: PROYECTOS*/
 .accordion-button, .accordion-item{
     background-color: var(--colorPrincipal);
@@ -165,3 +174,26 @@ section:nth-of-type(2) .accordion-body p{
     border: 2px solid var(--colorSecundario);
 }
 
+.accordion-item article{
+    background-color: var(--colorFondoArticulos);
+    border-radius: 18px;
+    padding: 5px;
+}
+
+/*SECCION 3: ESTUDIOS*/
+.FING{
+    color: rgb(67, 146, 199);
+}
+
+.LICEO{
+    color: rgb(145, 94, 0);
+}
+
+.RETOMAR{
+    color: rgb(217, 255, 0);
+}
+section:nth-of-type(3) article{
+    border-radius: 18px;
+    background-color: var(--colorFondoArticulos);
+    margin-bottom: 10px;
+}
