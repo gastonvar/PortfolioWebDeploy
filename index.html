@@ -13,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Kanit:wght@300&display=swap" rel="stylesheet">
+
+    <!--SECRIPT-->
+    <script defer src="js/js.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -31,44 +34,54 @@
         <header class="row justify-content-center align-items-center py-3">
             <nav class="col-5 list-unstyled">
               <ul class="list-inline">
-                <li class="list-inline-item rounded-circle"><a href="https://github.com/gastonvar"></a></li>
-                <li class="list-inline-item rounded-circle"><a href=""></a></li>
+                <li class="list-inline-item rounded-circle"><a target="_blank" rel="noopener noreferrer"href="https://github.com/gastonvar"></a></li>
+                <li class="list-inline-item rounded-circle"><a target="_blank" rel="noopener noreferrer"href=""></a></li>
               </ul>
             </nav>
-            <nav class="list-unstyled col-7 text-end">
+            <nav class="list-unstyled col-5 text-center">
                 <ul class="list-inline">
-                    <li class="list-inline-item me-3"><a href="#sobreMi" class="text-decoration-none"><span>01. </span> Sobre mi</a></li>
-                    <li class="list-inline-item me-3"><a href="#proyectos" class="text-decoration-none"><span>02. </span> Proyectos</a></li>
-                    <li class="list-inline-item me-3"><a href="#estudios" class="text-decoration-none"><span>03. </span> Estudios</a></li>
-                    <li class="list-inline-item me-4"><a href="#contacto" class="text-decoration-none"><span>04. </span> Contacto</a></li>
-                    <li class="list-inline-item"><a href="#curriculum" class="text-decoration-none p-1 rounded curriculumButton">Currículum</a></li>
+                    <li class="list-inline-item"><a href="#sobreMi" class="text-decoration-none"><span>01. </span> Sobre mi</a></li>
+                    <li class="list-inline-item"><a href="#proyectos" class="text-decoration-none"><span>02. </span> Proyectos</a></li>
+                    <li class="list-inline-item"><a href="#estudios" class="text-decoration-none"><span>03. </span> Estudios</a></li>
+                    <li class="list-inline-item"><a href="#contacto" class="text-decoration-none"><span>04. </span> Contacto</a></li>
+                    <li class="list-inline-item ms-4 mt-4"><a href="#curriculum" class="text-decoration-none p-1 rounded curriculumButton">Currículum</a></li>
                 </ul>
             </nav>
         </header>
     </div>
     <!--MAIN-->
     <main class="container-fluid">
+      <!--ROBOT-->
+      <div class="robot row my-0 py-0 justify-content-center" id="eyes">
+        <figure class="">
+          <img id="anchor" src="/img/sprites/robot.png" alt="" class="">
+          <!--OJOS-->
+            <img src="/img/sprites/ojo.png" class="eye d-none d-md-block" style="top:38px; left: 51px;" alt="">
+            <img src="/img/sprites/ojo.png" class="eye d-none d-md-block" alt="" style="top: 38px; left: 119px;">
+
+        </figure>
+      </div>
         <!--SECTION 1: PRESENTACION-->
-        <section class="row justify-content-center align-items-center my-5" id="sobreMi">
-          <figure class="text-center col-2">
-            <img src="/img/sprites/robot.png" alt="" class="img-fluid">
+        <section class="row justify-content-center align-items-center mb-5" id="sobreMi">
+          <figure class="text-center d-none d-md-block col-md-2">
+            <img src="/img/sprites/open-bracket.png" alt="" class="img-fluid">
           </figure>
-            <div class="col-8">
+            <div class="col-12 col-md-8">
                 <h3 class="">Hola, mi nombre es</h3>
                 <h1 class="">Gastón Varela.</h1>
                 <p>Actualmente soy estudiante de la carrera <span>Analista en tecnologias de la información</span> en la universidad <span class="ORT">ORT Uruguay</span>.</p>
                 <p>Poseo una <span>grán pasión por la resolución de problemas.</span> Cuento con habilidades técnicas sólidas respaldadas por proyectos académicos y experiencia práctica en <span>entornos de desarrollo de clase</span> y <span>proyectos personales</span>.</p>
                 <p>Estoy ansioso por obtener mi primera experiencia laboral en esta área.</p>
               </div>
-              <figure class="text-center col-2">
-                <img src="/img/sprites/robot.png" alt="" class="img-fluid">
+              <figure class="text-center d-none d-md-block col-md-2">
+                <img src="/img/sprites/close-bracket.png" alt="" class="img-fluid">
               </figure>
-            <div class="col-4 mt-5">
+            <div class="col-12 col-md-4 mt-5">
               <h2 class="text-center">Idiomas</h2>
               <p>Español - Nativo</p>
-              <p>Inglés - Fluido/C2 - <a href="https://www.efset.org/cert/6upzXT" class="text-decoration-none rounded curriculumButton">Certificado</a></p>
+              <p>Inglés - Fluido/C2 - <a target="_blank" rel="noopener noreferrer"href="https://www.efset.org/cert/6upzXT" class="text-decoration-none rounded curriculumButton">Certificado</a></p>
             </div>
-            <div class="col-4 mt-5">
+            <div class="col-12 col-md-4 mt-5">
               <h2 class="text-center">Tecnologías conocidas</h2>
               <p class="text-center">CSS/bootstrap - C#/.net - JS - SQLServer - HTML</p>
             </div>
@@ -76,8 +89,8 @@
         </section>
         <!--SECTION 2: PROYECTOS-->
         <section class="row justify-content-center my-5" id="proyectos">
-            <h2 class="col-7 text-center">Proyectos</h2>
-            <p class="col-7 text-center">que he desarrollado y culminado a lo largo de la carrera, documentos importantes en <span>GitHub</span></p>
+            <h2 class="col-12 text-center">Proyectos</h2>
+            <p class="col-7 text-center">que he desarrollado y culminado a lo largo de la carrera, documentación importante en <span>GitHub</span></p>
             <div class="accordion col-12" id="accordionExample">
                 <div class="accordion-item">
                   <h2 class="accordion-header">
@@ -88,25 +101,25 @@
                   <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body row justify-content-center">
                       <p class="col-12 accordion-caption text-center" id="accordion-caption">Proyectos en los que se trabajó durante cada semestre, siempre siguiendo las mejores prácticas aprendidas, aproximando las 250 horas de código.</p>
-                      <article class="col-6 mb-3">
+                      <article class="col-10 col-md-5 mb-3">
                         <figure>
-                          <a href="">
+                          <a target="_blank" rel="noopener noreferrer"href="">
                             <img src="/img/Programacion/CensoP1/wallpaper.png" alt="" class="img-fluid rounded">
                             <figcaption class="p-2">Censo 2023</figcaption>
                           </a>
                         </figure>
                         <p>Sitio one-page para censistas con registro de dos tipos de usuario, permite hacer operaciones con censos.</p>
-                        <p>HTML, JS, CSS || <a class="curriculumButton rounded text-decoration-none" href="https://github.com/gastonvar/Portfolio/tree/master/Prog/Censo_2023">GitHub</a></p>
+                        <p>HTML, JS, CSS || <a target="_blank" rel="noopener noreferrer"class="curriculumButton rounded text-decoration-none" href="https://github.com/gastonvar/Portfolio/tree/master/Prog/Censo_2023">GitHub</a></p>
                       </article>
-                      <article class="col-6 mb-3">
+                      <article class="col-10 col-md-5 mb-3">
                         <figure>
-                          <a href="">
+                          <a target="_blank" rel="noopener noreferrer"href="">
                             <img src="/img/Programacion/social.network/wallpaper.png" alt="" class="img-fluid rounded">
                             <figcaption class="p-2">Social .NET-work</figcaption>
                           </a>
                         </figure>
                         <p>Red social con manejo de sesiones, posts, comentarios, reacciones, amistades, etc.</p>
-                        <p>HTML, CSS, C#, .NET, Razor || <a class="curriculumButton rounded text-decoration-none" href="https://github.com/gastonvar/Portfolio/tree/master/Prog/Social.NETWORK">GitHub</a></p>
+                        <p>HTML, CSS, C#, .NET, Razor || <a target="_blank" rel="noopener noreferrer"class="curriculumButton rounded text-decoration-none" href="https://github.com/gastonvar/Portfolio/tree/master/Prog/Social.NETWORK">GitHub</a></p>
                       </article>
                     </div>
                   </div>
@@ -120,68 +133,68 @@
                   <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body row justify-content-center">
                       <p class="col-12 text-center" id="accordion-caption">Sitios one-page creados y diseñados siguiendo buenas prácticas de HTML / CSS y bootstrap.</p>
-                      <article class="col-6 mb-4">
+                      <article class="col-10 col-md-6 mb-4">
                         <figure>
-                          <a href="">
+                          <a target="_blank" rel="noopener noreferrer"href="">
                             <img src="/img/DisenoWeb/obligatorio.png" alt="" class="img-fluid rounded">
                             <figcaption class="p-2">Baldur's Gate</figcaption>
                           </a>
                         </figure>
-                        <p><a href="https://github.com/gastonvar/Portfolio/tree/master/DW/Baldur'sGate" class="curriculumButton rounded text-decoration-none text-center">Github</a></p>
+                        <p><a target="_blank" rel="noopener noreferrer"href="https://github.com/gastonvar/Portfolio/tree/master/DW/Baldur'sGate" class="curriculumButton rounded text-decoration-none text-center">Github</a></p>
                       </article>
-                      <article class="col-6 mb-4">
+                      <article class="col-10 col-md-6 mb-4">
                         <figure>
-                          <a href="">
+                          <a target="_blank" rel="noopener noreferrer"href="">
                             <img src="/img/DisenoWeb/DominosPizza.png" alt="" class="img-fluid rounded">
                             <figcaption class="p-2">Domino's Pizza</figcaption>
                           </a>
                         </figure>
-                        <p><a class="curriculumButton rounded text-decoration-none text-center" href="https://github.com/gastonvar/Portfolio/tree/master/DW/DominosPizza">Github</a></p>
+                        <p><a target="_blank" rel="noopener noreferrer"class="curriculumButton rounded text-decoration-none text-center" href="https://github.com/gastonvar/Portfolio/tree/master/DW/DominosPizza">Github</a></p>
                       </article>
-                      <article class="col-6 mb-4">
+                      <article class="col-10 col-md-6 mb-4">
                         <figure>
-                          <a href="">
+                          <a target="_blank" rel="noopener noreferrer"href="">
                             <img src="/img/DisenoWeb/Muebles.png" alt="" class="img-fluid rounded">
                             <figcaption class="p-2">Muebles</figcaption>
                           </a>
                         </figure>
-                        <p><a class="curriculumButton rounded text-decoration-none text-center" href="https://github.com/gastonvar/Portfolio/tree/master/DW/Muebles2">Github</a></p>
+                        <p><a target="_blank" rel="noopener noreferrer"class="curriculumButton rounded text-decoration-none text-center" href="https://github.com/gastonvar/Portfolio/tree/master/DW/Muebles2">Github</a></p>
                       </article>
-                      <article class="col-6 mb-4">
+                      <article class="col-10 col-md-6 mb-4">
                         <figure>
-                          <a href="">
+                          <a target="_blank" rel="noopener noreferrer"href="">
                             <img src="/img/DisenoWeb/Navidad.png" alt="" class="img-fluid rounded">
                             <figcaption class="p-2">Navidad</figcaption>
                           </a>
                         </figure>
-                        <p><a class="curriculumButton rounded text-decoration-none text-center" href="https://github.com/gastonvar/Portfolio/tree/master/DW/Navidad">Github</a></p>
+                        <p><a target="_blank" rel="noopener noreferrer"class="curriculumButton rounded text-decoration-none text-center" href="https://github.com/gastonvar/Portfolio/tree/master/DW/Navidad">Github</a></p>
                       </article>
-                      <article class="col-6 mb-4">
+                      <article class="col-10 col-md-6 mb-4">
                         <figure>
-                          <a href="">
+                          <a target="_blank" rel="noopener noreferrer"href="">
                             <img src="/img/DisenoWeb/Paris.png" alt="" class="img-fluid rounded">
                             <figcaption class="p-2">Paris</figcaption>
                           </a>
                         </figure>
-                        <p><a class="curriculumButton rounded text-decoration-none text-center" href="https://github.com/gastonvar/Portfolio/tree/master/DW/Paris">Github</a></p>
+                        <p><a target="_blank" rel="noopener noreferrer"class="curriculumButton rounded text-decoration-none text-center" href="https://github.com/gastonvar/Portfolio/tree/master/DW/Paris">Github</a></p>
                       </article>
-                      <article class="col-6 mb-4">
+                      <article class="col-10 col-md-6 mb-4">
                         <figure>
-                          <a href="">
+                          <a target="_blank" rel="noopener noreferrer"href="">
                             <img src="/img/DisenoWeb/Pull&Bear.png" alt="" class="img-fluid rounded">
                             <figcaption class="p-2">Pull & Bear</figcaption>
                           </a>
                         </figure>
-                        <p><a class="curriculumButton rounded text-decoration-none text-center" href="https://github.com/gastonvar/Portfolio/tree/master/DW/Pull%26Bear">Github</a></p>
+                        <p><a target="_blank" rel="noopener noreferrer"class="curriculumButton rounded text-decoration-none text-center" href="https://github.com/gastonvar/Portfolio/tree/master/DW/Pull%26Bear">Github</a></p>
                       </article>
-                      <article class="col-6 mb-4">
+                      <article class="col-10 col-md-6 mb-4">
                         <figure>
-                          <a href="">
+                          <a target="_blank" rel="noopener noreferrer"href="">
                             <img src="/img/DisenoWeb/Wimbledon.png" alt="" class="img-fluid rounded">
                             <figcaption class="p-2">Wimbledon</figcaption>
                           </a>
                         </figure>
-                        <p><a class="curriculumButton rounded text-decoration-none text-center" href="https://github.com/gastonvar/Portfolio/tree/master/DW/Wimbledon">Github</a></p>
+                        <p><a target="_blank" rel="noopener noreferrer"class="curriculumButton rounded text-decoration-none text-center" href="https://github.com/gastonvar/Portfolio/tree/master/DW/Wimbledon">Github</a></p>
                       </article>
                     </div>
                   </div>
@@ -197,13 +210,13 @@
                       <p class="col-12 text-center" id="accordion-caption">Proceso de diseño, creación y normalización de base de datos: MER-MR-SQL.</p>
                       <article class="col-6 mb-4">
                         <figure>
-                          <a href="">
+                          <a target="_blank" rel="noopener noreferrer"href="">
                             <img src="/img/BD/obligatorioPS/wallpaper.png" alt="" class="img-fluid rounded">
                             <figcaption class="p-2">Red Social</figcaption>
                           </a>
                         </figure>
                         <p>Base de datos cuyo proceso de desarrollo consistió de un MER, MR, normalización y pasaje a tablas en SQLServer</p>
-                        <p><a class="curriculumButton rounded text-decoration-none text-center" href="https://github.com/gastonvar/Portfolio/tree/master/BD/BDPS2023/Obligatorio1">Github (Documentación, MER, MR)</a></p> <p></p><a class="curriculumButton rounded text-decoration-none text-center" href="https://github.com/gastonvar/Portfolio/tree/master/BD/BDPS2023/Obligatorio2/20231113-ATI-307487-316838-M2A">GitHub (Creación de tablas, precarga de datos, querys)</a></p>
+                        <p><a target="_blank" rel="noopener noreferrer"class="curriculumButton rounded text-decoration-none text-center" href="https://github.com/gastonvar/Portfolio/tree/master/BD/BDPS2023">Github</a></p>
                       </article>
                     </div>
                   </div>
@@ -213,19 +226,28 @@
         <!--SECCION 3: ESTUDIOS-->
         <section class="row justify-content-center" id="estudios">
           <h2 class="col-12 text-center">Estudios</h2>
-          <article class="col-8">
+          <article class="col-8 mb-0">
             <h4>2023-Actualidad</h3>
               <p>Analista en tecnologías de la información - <span class="ORT">ORT Uruguay</span> - <span>Montevideo</span></p>
           </article>
-          <article class="col-8">
+          <figure class="col-12 text-center">
+            <img src="/img/sprites/arrow.png" alt="">
+          </figure>
+          <article class="col-8 mb-0">
             <h4>2022-2022</h3>
               <p>Ingeniería en sistemas - <span class="FING">Facultad de ingeniería UDELAR</span> - <span>Montevideo </span> <span class="text-decoration-underline RETOMAR">(a retomar)</span></p>
           </article>
-          <article class="col-8">
+          <figure class="col-12 text-center">
+            <img src="/img/sprites/arrow.png" alt="">
+          </figure>
+          <article class="col-8 mb-0">
             <h4>2019-2021</h3>
               <p>Bachillerato Orientación Físico / Matemática - <span class="LICEO">Liceo Santos Rabaquino Pacini</span> - <span>Santa Lucía, Canelones</span></p>
           </article>
-          <article class="col-8">
+          <figure class="col-12 text-center">
+            <img src="/img/sprites/arrow.png" alt="">
+          </figure>
+          <article class="col-8 mb-0">
             <h4>2016-2018</h3>
               <p>Ciclo Básico - <span class="LICEO">Liceo Nº2</span> - <span>Santa Lucía, Canelones</span></p>
           </article>

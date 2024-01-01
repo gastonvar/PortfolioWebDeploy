@@ -93,6 +93,37 @@ header nav ul li a:hover span{
     border:2px solid var(--colorRojo);
 }
 
+
+/*DIV 1: ROBOT*/
+main .robot{
+    margin-bottom: 0;
+    padding: 0;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+    position: relative;
+    top: 15px;
+}
+.robot figure{
+    margin-bottom: 0;
+    padding: 0;
+    position: relative;
+}
+.robot figure img:nth-of-type(2), div:nth-of-type(1) figure img:nth-of-type(3){
+width: 30px;
+top: 15px;
+position: absolute;
+}
+.robot figure img:nth-of-type(1){
+    width: 200px;
+    position: absolute;
+}
+#eyes, #eyes img{
+}
+
+
+
+
 /*SECCION 1: PRESENTACION*/
 section:nth-of-type(1) h3{
 color: var(--colorSecundario);
@@ -134,6 +165,9 @@ section:nth-of-type(2) .accordion-item button figure{
     background-repeat: no-repeat;
 }
 
+section:nth-of-type(2) .accordion-item article p a{
+margin: 50%;
+}
 
 section:nth-of-type(2) .accordion-item:nth-of-type(1) button figure{
 background-position: 0 0;
@@ -196,4 +230,12 @@ section:nth-of-type(3) article{
     border-radius: 18px;
     background-color: var(--colorFondoArticulos);
     margin-bottom: 10px;
+}
+
+section:nth-of-type(3) figure{
+    padding: 0;
+    margin: 0;
+}
+section:nth-of-type(3) figure img{
+    width: 25px;
 }
