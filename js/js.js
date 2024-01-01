@@ -10,7 +10,6 @@ document.addEventListener('mousemove', (e)=>{
     const mouseY = e.clientY
 
     const angleDeg = angle(mouseX,mouseY,anchorX,anchorY)
-    console.log(angleDeg)
 
     const eyes = document.querySelectorAll('.eye')
 
