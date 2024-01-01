@@ -95,19 +95,34 @@ header nav ul li a:hover span{
 
 
 /*DIV 1: ROBOT*/
+main .htmlopen{
+    position: absolute;
+    top: 250px;
+}
+main .htmlopen:nth-of-type(1){
+    left: 30%;
+}
+main .htmlopen{
+right: 30%;
+}
+main .htmlopen{
+    width: 100px;
+}
+
 main .robot{
-    margin-bottom: 0;
     padding: 0;
     height: 200px;
-    width: 200px;
-    margin: 0 auto;
+    width: 300px;
+    margin: 50% auto;
     position: relative;
     top: 15px;
+    justify-content: center;
 }
 .robot figure{
     margin-bottom: 0;
     padding: 0;
     position: relative;
+    width: 200px;
 }
 .robot figure img:nth-of-type(2), div:nth-of-type(1) figure img:nth-of-type(3){
 width: 30px;
