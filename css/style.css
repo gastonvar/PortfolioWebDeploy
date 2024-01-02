@@ -48,7 +48,7 @@ font-weight: 900;
 header nav:nth-of-type(1) ul li{
     width: 55px;
     height: 55px;
-    background-image: url(/img/sprites/sprites.png);
+    background-image: url("../img/sprites/sprites.png");
     background-repeat: no-repeat;
     transition: all .09s;
 }
@@ -241,7 +241,7 @@ section:nth-of-type(2) .accordion-item button figure{
     top: 20%;
     height: 30px;
     width: 30px;
-    background-image: url(/img/sprites/spritesProyectos.png);
+    background-image: url("../img/sprites/spritesProyectos.png");
     background-repeat: no-repeat;
 }
 
