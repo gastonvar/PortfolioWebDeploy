@@ -35,8 +35,6 @@ function reveal() {
       var elementVisible = 10;
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add("active");
-      } else {
-        reveals[i].classList.remove("active");
       }
     }
 }
@@ -96,14 +94,3 @@ window.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', toggleCollapsedClass);
     window.addEventListener('resize', toggleCollapsedClass2);
   });
-
-  let elementosAparecen = document.querySelectorAll('.reveal')
-  window.addEventListener('scroll', b=>{
-    console.log(scrollY)
-    if(scrollY>(window.innerHeight/3)*2.8){
-      elementosAparecen[0].classList.remove('reveal')
-    }
-    if(scrollY>(window.innerHeight)*1.2){
-      elementosAparecen[1].classList.remove('reveal')
-    }
-})
