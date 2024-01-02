@@ -61,3 +61,39 @@ document.querySelector("#ultimo").addEventListener("click", () => {
         }); 
     }
 });
+
+/*ESTUDIOS*/
+
+window.addEventListener('DOMContentLoaded', function() {
+    var accordionButtons = document.querySelectorAll('.accordion-collapse');
+    
+    var accordionItems = document.querySelectorAll('.accordion-button')
+
+    function toggleCollapsedClass() {
+        accordionItems.forEach(function(button) {
+          if (window.innerWidth < 767) {
+            button.classList.remove('collapsed');
+          } else {
+            button.classList.add('collapsed');
+          }
+        });
+      }
+
+    function toggleCollapsedClass2() {
+      accordionButtons.forEach(function(button) {
+        if (window.innerWidth < 767) {
+          button.classList.remove('collapse');
+        } else {
+          button.classList.add('collapse');
+        }
+      });
+    }
+
+    // Initial check on page load
+    toggleCollapsedClass();
+    toggleCollapsedClass2();
+
+    // Update the class on window resize
+    window.addEventListener('resize', toggleCollapsedClass);
+    window.addEventListener('resize', toggleCollapsedClass2);
+  });
