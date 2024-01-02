@@ -297,7 +297,9 @@ section:nth-of-type(2) .accordion-body p{
 [role="button"] {
     cursor: pointer;
 }
-
+.accordion-header{
+cursor: pointer;
+}
 /*SECCION 3: ESTUDIOS*/
 .FING{
     color: rgb(67, 146, 199);
