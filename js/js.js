@@ -5,7 +5,6 @@ const anchorY = rekt.top + rekt.height / 3;
 
 /*OJOS ROBOT*/ 
 document.addEventListener('mousemove', (e)=>{
-    console.log(e)
     const mouseX = e.clientX
     const mouseY = e.clientY
 
@@ -97,3 +96,14 @@ window.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', toggleCollapsedClass);
     window.addEventListener('resize', toggleCollapsedClass2);
   });
+
+  let elementosAparecen = document.querySelectorAll('.reveal')
+  window.addEventListener('scroll', b=>{
+    console.log(scrollY)
+    if(scrollY>(window.innerHeight/3)*2.8){
+      elementosAparecen[0].classList.remove('reveal')
+    }
+    if(scrollY>(window.innerHeight)*1.2){
+      elementosAparecen[1].classList.remove('reveal')
+    }
+})
