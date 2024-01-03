@@ -104,7 +104,7 @@ header .navizq{
 }
 
 header .navder{
-    right: -40%;
+    right: -100%;
     animation: EntradaDer2 1s linear forwards;
     opacity: 1;
     animation-delay: .2s;
@@ -133,7 +133,7 @@ header .navder{
 /*DIV 1: ROBOT*/
 main .htmlopen{
     position: absolute;
-    top: 250px;
+    top: 150px;
     width: 100px;
     opacity: 0;
 }

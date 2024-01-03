@@ -16,7 +16,7 @@ function scrolldown() {
 const anchor=document.getElementById('anchor')
 const rekt = anchor.getBoundingClientRect();
 const anchorX = rekt.left + rekt.width / 2;
-const anchorY = rekt.top + rekt.height / 2 + 150;
+const anchorY = rekt.top + rekt.height / 2 - 40;
 
 document.addEventListener('mousemove', (e)=>{
     const mouseX = e.clientX
