@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio one-page de GV">
+    <title>Portfolio - Gastón</title>
+
     <!--BOOTSTRAP CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
@@ -15,10 +17,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Kanit:wght@300&display=swap" rel="stylesheet">
 
-    <!--SECRIPT-->
-    <script defer src="js/js.js"></script>
-    <title>Portfolio - Gastón</title>
-    
+    <!--BOOTSTRAP JS-->
+    <script type="importmap">
+      {
+        "imports": {
+          "@popperjs/core": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.min.js",
+          "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.esm.min.js"
+        }
+      }
+      </script>
+      <script type="module">
+        import * as bootstrap from 'bootstrap'
+  
+        new bootstrap.Popover(document.getElementById('popoverButton'))
+      </script>
+
+    <!--EMAILJS SCRIPT-->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+  <script type="text/javascript">
+   (function(){
+      emailjs.init("CjfnckjMLtNkKsn9y");
+   })();
+  </script>
+
+      <!--MI SCRIPT-->
+      <script defer src="js/js.js"></script>
 </head>
 <body>
     <div class="container-fluid">
@@ -70,7 +95,8 @@
       </figure>
 
         <!--SECTION 1: PRESENTACION-->
-        <section class="row justify-content-center align-items-center mb-5 reveal" id="sobreMi">
+        <aux  id="sobreMi"></aux>
+        <section class="row justify-content-center align-items-center mb-5 reveal">
           <figure class="text-center d-none d-lg-block col-lg-2 bracketopen">
             <img src="./img/sprites/open-bracket.png" alt="" class="img-fluid">
           </figure>
@@ -95,10 +121,10 @@
                 <p class="text-center">CSS/bootstrap - C#/.net - JS - SQLServer - HTML</p>
               </article>
             </div>
-     
         </section>
+        <aux  id="proyectos"></aux>
         <!--SECTION 2: PROYECTOS-->
-        <section class="row justify-content-center my-5 reveal" id="proyectos">
+        <section class="row justify-content-center my-5 reveal">
             <h2 class="col-12 text-center">Proyectos</h2>
             <p class="col-7 text-center">que he desarrollado y culminado a lo largo de la carrera, documentación importante en <span>GitHub</span></p>
             <div class="accordion col-12 col-md-8" style="cursor: pointer;" id="accordionExample">
@@ -234,7 +260,8 @@
               </div>
         </section>
         <!--SECCION 3: ESTUDIOS-->
-        <section class="row justify-content-center reveal" id="estudios">
+        <aux id="estudios"></aux>
+        <section class="row justify-content-center reveal">
           <h2 class="col-12 text-center">Estudios</h2>
           <article class="col-12 col-md-8 mb-0">
             <h4>2023-Actualidad</h3>
@@ -262,26 +289,27 @@
               <p>Ciclo Básico - <span class="LICEO">Liceo Nº2</span> - <span>Santa Lucía, Canelones</span></p>
           </article>
         </section>
+
+        <!--SECCION 3: CONTACTO-->
+        <aux id="contacto"></aux>
+        <section class="row my-5 reveal justify-content-center container-fluid">
+          <h2 class="col-12 text-center">Contacto</h2>
+          <p class="col-12 text-center">* Campo requerido</p>
+          <form action="#" onsubmit="return false" class="col-12 col-md-8 p-5">
+            <label for="nombre">Nombre y apellido *</label>
+            <input type="text" id="nombre" name="nombre" class=" d-block w-100 p-2 mb-2 rounded" placeholder="Ej. Lucas Perez" required>
+            <label for="email">Email *</label>
+            <input type="text" id="email" name="email" class="d-block w-100 p-2 mb-2 rounded" placeholder="Ej. lucasperez@gmail.com" required>
+            <label for="asunto">Asunto *</label>
+            <input type="text" id="asunto" name="asunto" class=" d-block w-100 p-2 mb-2 rounded" placeholder="Ej. Propuesta" required>
+            <label for="mensaje">Mensaje *</label>
+            <textarea name="mensaje" id="mensaje" cols="" rows="" class="d-block w-100 mb-2 rounded" placeholder="" required></textarea>
+            <button type="submit" class="d-block w-50 p-2 mt-3 rounded" onclick="sendMail()">
+              Enviar
+            </button>
+        </form>
+        <div id="errorContacto"></div>
+        </section>
     </main>
-   
-
-
-
-
-
-
-    <script type="importmap">
-    {
-      "imports": {
-        "@popperjs/core": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.min.js",
-        "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.esm.min.js"
-      }
-    }
-    </script>
-    <script type="module">
-      import * as bootstrap from 'bootstrap'
-
-      new bootstrap.Popover(document.getElementById('popoverButton'))
-    </script>
 </body>
 </html>

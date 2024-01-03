@@ -1,3 +1,7 @@
+/*
+Hace el scrolldown al abrir la pagina para que los elementos
+carguen correctamente
+*/
 scrolldown()
 function scrolldown() {
   window.scrollBy(0, 200);
@@ -7,19 +11,18 @@ function scrolldown() {
   }, 100);
 }
 
+/*OJOS ROBOT*/ 
+/*Rota los ojos*/
 const anchor=document.getElementById('anchor')
 const rekt = anchor.getBoundingClientRect();
 const anchorX = rekt.left + rekt.width / 2;
 const anchorY = rekt.top + rekt.height / 2 + 150;
-console.log(anchorY)
 
-/*OJOS ROBOT*/ 
 document.addEventListener('mousemove', (e)=>{
     const mouseX = e.clientX
     const mouseY = e.clientY
 
     const angleDeg = angle(mouseX,mouseY,anchorX,anchorY)
-    console.log(mouseY)
     const eyes = document.querySelectorAll('.eye')
 
     eyes.forEach(eye =>{
@@ -35,17 +38,16 @@ function angle(cx,cy,ex,ey){
     const deg = rad*180 / Math.PI;
     return deg;
 }
+
 /*FADE IN ROBOT*/
 document.addEventListener('DOMContentLoaded', function() {
-  // Obtén el div
   var miDiv = document.querySelector('.robot');
-
-  // Agrega la clase 'show' después de un breve retraso (por ejemplo, 1 segundo)
   setTimeout(function() {
       miDiv.classList.add('show');
   }, 1000);
 });
 /*REVEAL*/
+/*Hace que los elementos vengan desde abajo con menos opacidad*/
 function reveal() {
     var reveals = document.querySelectorAll(".reveal");
     for (var i = 0; i < reveals.length; i++) {
@@ -62,7 +64,7 @@ window.addEventListener("scroll", reveal);
 // To check the scroll position on page load
 reveal();
 
-
+/*Desplaza el scroll para que se vea mejor el ultimo boton del acordion*/
 let cantidadClicksEnUltimo = 0;
 document.querySelector("#ultimo").addEventListener("click", () => {
     cantidadClicksEnUltimo++
@@ -78,8 +80,8 @@ document.querySelector("#ultimo").addEventListener("click", () => {
     }
 });
 
-/*ESTUDIOS*/
-
+/*PROYECTOS*/
+/*Abre el acordion segun la resolucion*/
 window.addEventListener('DOMContentLoaded', function() {
     var accordionButtons = document.querySelectorAll('.accordion-collapse');
     
@@ -105,11 +107,53 @@ window.addEventListener('DOMContentLoaded', function() {
       });
     }
 
-    // Initial check on page load
+
     toggleCollapsedClass();
     toggleCollapsedClass2();
 
-    // Update the class on window resize
+
     window.addEventListener('resize', toggleCollapsedClass);
     window.addEventListener('resize', toggleCollapsedClass2);
   });
+
+  /*CONTACTO*/
+  /*SCRIPT DE EMAILJS*/
+  function sendMail(){
+    let nombreTest = document.getElementById("nombre").value
+    let emailTest = document.getElementById("email").value
+    let asuntoTest = document.getElementById("asunto").value
+    let mensajeTest = document.getElementById("mensaje").value
+    if(validarInput(nombreTest) && validarInput(emailTest) && validarEmail(emailTest) && validarInput(asuntoTest) && validarInput(mensajeTest)){
+      let parms = {
+        nombre : nombreTest,
+        email : emailTest,
+        asunto : asuntoTest,
+        mensaje : mensajeTest
+      }
+      emailjs.send("service_5xe9weg","template_ktuglou",parms).then(alert("Correo enviado correctamente. Me pondré en contacto contigo a la brevedad. Muchas gracias!"))
+      document.getElementById("nombre").value = ""
+      document.getElementById("email").value=""
+      document.getElementById("asunto").value=""
+      document.getElementById("mensaje").value=""
+    }else{
+      alert("Ha ocurrido un error, el mail no ha sido enviado, revisar los campos ingresados")
+    }
+  }
+
+function validarInput(pInput){
+if(pInput==null){
+  return false;
+  }else{
+    return true
+  }
+}
+
+function validarEmail(pEmail){
+  var posicionArroba = pEmail.indexOf('@');
+
+  if (posicionArroba !== -1 && posicionArroba !== 0 && posicionArroba !== pEmail.length - 1) {
+    return true;
+  } else {
+    return false;
+  }
+}

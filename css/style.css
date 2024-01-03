@@ -378,3 +378,17 @@ section:nth-of-type(3) figure img{
     transform: translateY(0);
     opacity: 1;
 }
+
+/*SECCION 4: CONTACTO*/
+form{
+    background-color: var(--colorFondoArticulos);
+    border-radius: 18px;
+}
+textarea{
+    resize: none;
+    height: 100px;
+}
+
+form button[type="submit"] {
+    margin: 0 auto;
+}
