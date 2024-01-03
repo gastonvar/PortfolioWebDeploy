@@ -93,6 +93,42 @@ header nav ul li a:hover span{
     border:2px solid var(--colorRojo);
 }
 
+header nav{
+position: relative;
+}
+header .navizq{
+    left: -25%;
+    animation: EntradaIzq2 1s linear forwards;
+    opacity: 1;
+    animation-delay: .2s;
+}
+
+header .navder{
+    right: -40%;
+    animation: EntradaDer2 1s linear forwards;
+    opacity: 1;
+    animation-delay: .2s;
+}
+@keyframes EntradaIzq2{
+    0%{
+        left:-10%;
+        opacity: 0;
+    }
+    100%{
+        left: 0%;
+        opacity: 1;
+    }
+}
+@keyframes EntradaDer2{
+    0%{
+        right:-10%;
+        opacity: 0;
+    }
+    100%{
+        right: 30%;
+        opacity: 1;
+    }
+}
 
 /*DIV 1: ROBOT*/
 main .htmlopen{
@@ -101,22 +137,20 @@ main .htmlopen{
     width: 100px;
     opacity: 0;
 }
+
 main .htmlopen:nth-of-type(1){
     left: -10%;
     animation: EntradaIzq 1s linear forwards;
     opacity: 1;
     animation-delay: 0.2s;
 }
-main .htmlopen{
-    width: 100px;
-}
+
 main .htmlopen:nth-of-type(2){
 right: -10%;
 animation: EntradaDer 1s linear forwards;
 opacity: 1;
 animation-delay: 0.2s;
 }
-
 
 @keyframes EntradaIzq{
     0%{
@@ -147,6 +181,16 @@ main .robot{
     margin: 50% auto;
     position: relative;
     justify-content: center;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.robot.show{
+    opacity: 1;
+}
+@media (max-width: 991px) {
+    .robot {
+        display: none; /* Oculta el div cuando la resolución es 991px o menor */
+    }
 }
 .robot figure{
     margin-bottom: 0;
@@ -162,8 +206,6 @@ position: absolute;
 .robot figure img:nth-of-type(1){
     width: 200px;
     position: absolute;
-}
-#eyes, #eyes img{
 }
 
 
@@ -282,6 +324,10 @@ section:nth-of-type(2) #accordion-caption{
 section:nth-of-type(2) .accordion-body p{
     color: white;
     font-size: 14px;
+}
+
+.accordion{
+    --bs-accordion-active-bg:rgb(73, 158, 158);
 }
 
 .accordion-item{

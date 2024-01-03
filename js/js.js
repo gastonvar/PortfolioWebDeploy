@@ -1,7 +1,17 @@
+scrolldown()
+function scrolldown() {
+  window.scrollBy(0, 200);
+
+  setTimeout(() => {
+      window.scrollBy(0, -200);
+  }, 100);
+}
+
 const anchor=document.getElementById('anchor')
 const rekt = anchor.getBoundingClientRect();
 const anchorX = rekt.left + rekt.width / 2;
-const anchorY = rekt.top + rekt.height / 3;
+const anchorY = rekt.top + rekt.height / 2 + 150;
+console.log(anchorY)
 
 /*OJOS ROBOT*/ 
 document.addEventListener('mousemove', (e)=>{
@@ -9,7 +19,7 @@ document.addEventListener('mousemove', (e)=>{
     const mouseY = e.clientY
 
     const angleDeg = angle(mouseX,mouseY,anchorX,anchorY)
-
+    console.log(mouseY)
     const eyes = document.querySelectorAll('.eye')
 
     eyes.forEach(eye =>{
@@ -25,7 +35,16 @@ function angle(cx,cy,ex,ey){
     const deg = rad*180 / Math.PI;
     return deg;
 }
+/*FADE IN ROBOT*/
+document.addEventListener('DOMContentLoaded', function() {
+  // Obtén el div
+  var miDiv = document.querySelector('.robot');
 
+  // Agrega la clase 'show' después de un breve retraso (por ejemplo, 1 segundo)
+  setTimeout(function() {
+      miDiv.classList.add('show');
+  }, 1000);
+});
 /*REVEAL*/
 function reveal() {
     var reveals = document.querySelectorAll(".reveal");
@@ -33,7 +52,7 @@ function reveal() {
       var windowHeight = window.innerHeight;
       var elementTop = reveals[i].getBoundingClientRect().top;
       var elementVisible = 10;
-      if (elementTop < windowHeight - elementVisible) {
+      if (elementTop < windowHeight - elementVisible+200) {
         reveals[i].classList.add("active");
       }
     }
@@ -68,7 +87,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     function toggleCollapsedClass() {
         accordionItems.forEach(function(button) {
-          if (window.innerWidth < 767) {
+          if (window.innerWidth < 991) {
             button.classList.remove('collapsed');
           } else {
             button.classList.add('collapsed');
@@ -78,7 +97,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     function toggleCollapsedClass2() {
       accordionButtons.forEach(function(button) {
-        if (window.innerWidth < 767) {
+        if (window.innerWidth < 991) {
           button.classList.remove('collapse');
         } else {
           button.classList.add('collapse');
