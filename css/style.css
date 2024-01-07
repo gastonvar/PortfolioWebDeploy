@@ -97,7 +97,7 @@ header nav{
 position: relative;
 }
 header .navizq{
-    left: -25%;
+    left: -100%;
     animation: EntradaIzq2 1s linear forwards;
     opacity: 1;
     animation-delay: .2s;
