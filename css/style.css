@@ -12,7 +12,7 @@ html{
 :root{
 --colorSecundario: #20e3b2;
 --colorPrincipal:rgb(10,25,47);
---colorRojo:rgb(102, 16, 32);
+--colorRojo:rgb(255, 40, 80);
 --colorFondoArticulos:rgb(0, 0, 0,0.2);
 }
 body{
@@ -393,5 +393,15 @@ textarea{
 }
 
 form button[type="submit"] {
+    margin: 0 auto;
+}
+
+/*FOOTER*/
+footer{
+    background-color: var(--colorFondoArticulos);
+}
+
+footer .curriculumButton{
+    width: 20%;
     margin: 0 auto;
 }
